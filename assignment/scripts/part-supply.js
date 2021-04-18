@@ -41,7 +41,6 @@ console.log('6. Showing supplyChanges...');
 
 // for loop
 for (let i = 0; i < supplyChanges.length; i++) {
-  supplyChanges[i]
   if (supplyChanges[i] > 0){
     console.log(`Added ${supplyChanges[i]} parts`);
   }
@@ -69,8 +68,14 @@ for (changes of supplyChanges){
 console.log('8. Showing supplyChanges with "while" loop');
 
 // while loop
-while (true) {
-
+while (supplyChanges.length > 0){
+  if (supplyChanges[0] > 0) {
+    console.log(`Added ${supplyChanges[0]} parts`);
+  }
+  else if (supplyChanges[0] < 0) {
+    console.log(`Part count ${supplyChanges[0]}`);
+  }
+  supplyChanges.shift();
 } // end while
 
 // 9. Write a loop to determine the total number of parts available by
